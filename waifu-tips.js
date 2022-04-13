@@ -134,7 +134,7 @@ function loadWidget(config) {
             .then(response => response.json())
             .then(result => {
                 const text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.author}</span> 在 hitokoto.cn 投稿的。`;
-                showMessage(result.quote, 6000, 9);
+                showMessage(result.content, 6000, 9);
                 setTimeout(() => {
                     showMessage(text, 4000, 9);
                 }, 6000);
