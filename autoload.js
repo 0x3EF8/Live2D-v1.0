@@ -1,4 +1,4 @@
-const live2d_path = "https://cdn.jsdelivr.net/gh/0x3EF8/Live2D-v5@master/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/0x3EF8/Live2D-v6@master/";
 //const live2d_path = "/live2d-widget/";
 
 // Encapsulate the method of asynchronously loading resources
