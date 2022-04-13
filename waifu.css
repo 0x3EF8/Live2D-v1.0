@@ -52,6 +52,7 @@
     position: absolute;
     text-overflow: ellipsis;
     transition: opacity 1s;
+    right: auto;
     height: auto;
     width: 250px;
     word-break: break-all;
