@@ -46,7 +46,7 @@
     font-size: 14px;
     line-height: 24px;
     margin: -30px 20px;
-    min-height: 70px;
+    min-height: auto;
     opacity: 0;
     overflow: hidden;
     padding: 5px 10px;
