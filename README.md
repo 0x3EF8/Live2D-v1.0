@@ -1,6 +1,8 @@
+# Live2D
+
 This plugin requires Font Awesome.
 Please add in `<head>`:
-Font Awesome (v4 or v5) is required for this plugin. Take Font Awesome v4 as an example, please add the following in `<head>`:
+
 ````xml
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 ````
