@@ -130,7 +130,7 @@ function loadWidget(config) {
 
     function showQuotable() {
         // 增加 hitokoto.cn 的 API
-        fetch("ttps://api.quotable.io/random")
+        fetch("https://api.quotable.io/random")
             .then(response => response.json())
             .then(result => {
                 const text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.author}</span> 在 hitokoto.cn 投稿的。`;
