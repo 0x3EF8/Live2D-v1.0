@@ -49,7 +49,7 @@
     opacity: 0;
     overflow: hidden;
     padding: 5px 10px;
-    position: static;
+    position: relative;
     text-overflow: ellipsis;
     transition: opacity 1s;
     height: auto;
