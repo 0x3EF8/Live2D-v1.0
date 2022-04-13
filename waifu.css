@@ -80,7 +80,7 @@
 #waifu-tool {
     color: #aaa;
     opacity: 0;
-    position: absolute;
+    position: fixed;
     left: -10px;
     top: 70px;
     transition: opacity 1s;
