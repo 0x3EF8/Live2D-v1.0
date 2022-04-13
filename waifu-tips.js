@@ -59,7 +59,7 @@ function loadWidget(config) {
     }, 1000);
 
     (function registerEventListener() {
-        document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showquotable);
+        document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showQuotable);
         document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
             if (window.Asteroids) {
                 if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];
@@ -128,29 +128,18 @@ function loadWidget(config) {
         showMessage(text, 7000, 8);
     })();
 
-    function showquotable() {
-        const api = "https://api.quotable.io/random";
-
-        const quote = document.getElementById("quote");
-        const author = document.getElementById("author");
-        const btn = document.getElementById("btn");
-
-        btn.addEventListener("click", getQuote);
-
-        function getQuote() {
-            fetch(api)
-                .then((res) => res.json())
-                .then((data) => {
-                    quote.innerHTML = `"${data.content}"`;
-                    author.innerHTML = `- ${data.author}`;
-                });
-        }
+    function showQuotable() {
+        // 增加 hitokoto.cn 的 API
+        fetch("ttps://api.quotable.io/random")
+            .then(response => response.json())
+            .then(result => {
+                const text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.author}</span> 在 hitokoto.cn 投稿的。`;
+                showMessage(result.quote, 6000, 9);
+                setTimeout(() => {
+                    showMessage(text, 4000, 9);
+                }, 6000);
+            });
     }
-
-
-
-
-
 
     function showMessage(text, timeout, priority) {
         if (!text || (sessionStorage.getItem("waifu-text") && sessionStorage.getItem("waifu-text") > priority)) return;
