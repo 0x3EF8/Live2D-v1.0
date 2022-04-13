@@ -46,13 +46,13 @@
     font-size: 14px;
     line-height: 24px;
     margin: -30px 20px;
-    min-height: auto;
     opacity: 0;
     overflow: hidden;
     padding: 5px 10px;
-    position: absolute;
+    position: static;
     text-overflow: ellipsis;
     transition: opacity 1s;
+    height: auto;
     width: 250px;
     word-break: break-all;
 }
