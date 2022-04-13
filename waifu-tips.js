@@ -129,17 +129,28 @@ function loadWidget(config) {
     })();
 
     function showquotable() {
-        // 增加 hitokoto.cn 的 API
-        fetch("https://api.quotable.io/random")
-            .then(response => response.json())
-            .then(result => {
-                const text = `这句一言来自 <span>「${result.from}」</span>，是 <span>${result.creator}</span> 在 quotable.io 投稿的。`;
-                showMessage(result.quotable, 6000, 9);
-                setTimeout(() => {
-                    showMessage(text, 4000, 9);
-                }, 6000);
-            });
+        const api = "https://api.quotable.io/random";
+
+        const quote = document.getElementById("quote");
+        const author = document.getElementById("author");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", getQuote);
+
+        function getQuote() {
+            fetch(api)
+                .then((res) => res.json())
+                .then((data) => {
+                    quote.innerHTML = `"${data.content}"`;
+                    author.innerHTML = `- ${data.author}`;
+                });
+        }
     }
+
+
+
+
+
 
     function showMessage(text, timeout, priority) {
         if (!text || (sessionStorage.getItem("waifu-text") && sessionStorage.getItem("waifu-text") > priority)) return;
