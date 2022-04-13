@@ -49,7 +49,7 @@
     opacity: 0;
     overflow: hidden;
     padding: 5px 10px;
-    position: static;
+    position: fixed;
     text-overflow: ellipsis;
     transition: opacity 1s;
     height: auto;
@@ -80,7 +80,7 @@
 #waifu-tool {
     color: #aaa;
     opacity: 0;
-    position: fixed;
+    position: absolute;
     left: -10px;
     top: 70px;
     transition: opacity 1s;
