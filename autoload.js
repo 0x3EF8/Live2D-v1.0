@@ -1,5 +1,4 @@
-// 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/0x3EF8/Live2D@master/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/0x3EF8/Live2D-Final@master/";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
