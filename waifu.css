@@ -5,11 +5,11 @@
     color: #fff;
     cursor: pointer;
     font-size: 12px;
-    left: 0;
-    margin-left: -100px;
+    right: 0;
+    margin-right: -100px;
     padding: 5px 2px 5px 5px;
     position: fixed;
-    transition: margin-left 1s;
+    transition: margin-right 1s;
     width: 60px;
     writing-mode: vertical-rl;
 }
